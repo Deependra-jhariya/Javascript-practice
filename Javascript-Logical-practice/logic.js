@@ -157,11 +157,97 @@
 
 // console.log("unique number of array",uniqueNumber)
 
+// solution no 2
+
+// const numbers = [1, 2, 2, 3, 4, 4, 5];
+
+// const unique = [...new Set(numbers)];
+
+// console.log("unique number of array", unique);
+
+// 6. Reverse an array
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// for (let i = 0; i < Math.floor(numbers.length / 2); i++) {
+//   temp = numbers[i];
+//   numbers[i] = numbers[numbers.length - 1 - i];
+//   numbers[numbers.length - 1 - i] = temp;
+// }
+
+// console.log("number", numbers);
 
 // solution no 2
 
-const numbers = [1, 2, 2, 3, 4, 4, 5];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const unique = [...new Set(numbers)];
+// const reverseArray = [...numbers].reverse();
 
-console.log("unique number of array", unique);
+// console.log("reverseArray", reverseArray);
+
+// solution 3
+
+// const arr = [1, 2, 3, 4, 5, 6];
+
+// let start = 0;
+
+// let end = arr.length - 1;
+
+// while (start < end) {
+//   [arr[start], arr[end]] = [arr[end], arr[start]];
+
+//   start++;
+//   end--;
+// }
+
+// console.log("reverse array", arr);
+
+// 7. bubble sorting
+
+// let arr = [11, 24, 36, 4, 5];
+
+// for (let j = 0; j < arr.length - 1; j++) {
+//   for (let i = 0; i < arr.length - j - 1; i++) {
+//     if (arr[i] > arr[i + 1]) {
+//       let temp = arr[i];
+//       arr[i] = arr[i + 1];
+//       arr[i + 1] = temp;
+//     }
+//   }
+// }
+
+// console.log("sorting array ", arr);
+
+// 8. Write a function to check number which is even or odd
+
+// const checkEvenOdd = (value) => {
+//   if (value % 2 == 0) {
+//     return "even";
+//   } else {
+//     return "odd";
+//   }
+// };
+
+// console.log(checkEvenOdd(12));
+
+// 9. write a function that take a number and return its factorial .
+
+// factorial  - 5*4*3*2*1
+
+// const getFact = (num) => {
+//   let fct = 1;
+//   for (let i = 1; i <= num; i++) {
+//     fct = fct * i;
+//   }
+//   return fct;
+// };
+
+// console.log(getFact(5));
+
+// using loop .......
+// let fct = 1;
+// for (let i = 1; i <= 5; i++) {
+//   fct = fct * i;
+// }
+
+// console.log("fact", fct);
