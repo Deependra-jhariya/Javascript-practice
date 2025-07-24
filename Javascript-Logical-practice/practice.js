@@ -282,19 +282,161 @@
 
 // solution no 2
 
-const arr = [1, [2, [3, 4], 5]];
+// const arr = [1, [2, [3, 4], 5]];
 
-const flattenArray = (arr) => {
-  let result = [];
+// const flattenArray = (arr) => {
+//   let result = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-      result = result.concat(flattenArray(arr[i]));
-    } else {
-      result.push(arr[i]);
-    }
-  }
-  return result;
-};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (Array.isArray(arr[i])) {
+//       result = result.concat(flattenArray(arr[i]));
+//     } else {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// };
 
-console.log("flatten array ", flattenArray(arr));
+// console.log("flatten array ", flattenArray(arr));
+
+// .............................................................................................................
+
+/* 
+🔥 Advanced Array Logic Questions
+
+
+1️⃣ Rotate an array by K positions
+Example:
+Input: [1, 2, 3, 4, 5], k = 2
+Output: [4, 5, 1, 2, 3] (right rotation)
+
+2️⃣ Find all elements that appear more than once
+Example:
+Input: [1, 2, 3, 2, 4, 1]
+Output: [1, 2]
+
+3️⃣ Find the frequency of each element in an array
+Example:
+Input: [1, 2, 2, 3, 1, 4]
+Output: {1: 2, 2: 2, 3: 1, 4: 1}
+
+4️⃣ Find the missing number in a given range
+Example:
+Input: [1, 2, 4, 5]
+Expected: 3 is missing
+
+5️⃣ Find the intersection of two arrays
+Example:
+Input: [1, 2, 3] and [2, 3, 4]
+Output: [2, 3]
+
+6️⃣ Find the union of two arrays (no duplicates)
+Example:
+Input: [1, 2, 3] and [3, 4, 5]
+Output: [1, 2, 3, 4, 5]
+
+7️⃣ Group elements by type (number, string, etc.)
+Example:
+Input: [1, "a", true, 2, "b", false]
+Output: {number: [1, 2], string: ["a", "b"], boolean: [true, false]}
+
+8️⃣ Find longest increasing subarray
+Example:
+Input: [1, 2, 2, 3, 4, 1, 5, 6]
+Output: [1, 5, 6] or [2, 3, 4] depending on logic
+
+9️⃣ Remove falsy values from array
+Falsy values: false, 0, '', null, undefined, NaN
+Input: [0, "hello", false, 42, "", null]
+Output: ["hello", 42]
+
+🔟 Chunk an array into smaller arrays of size n
+Input: [1, 2, 3, 4, 5, 6], size = 2
+Output: [[1, 2], [3, 4], [5, 6]]
+*/
+
+// 1️⃣ Rotate an array by K positions
+// Example:
+// Input: [1, 2, 3, 4, 5], k = 2
+// Output: [4, 5, 1, 2, 3] (right rotation)
+
+//note : when rotate array by k position then we shift last k element to start .
+
+// let arr = [1, 2, 3, 4, 5];
+
+// k = 2;
+
+// const rotateBy = (arr, k) => {
+//   let n = arr.length;
+//   //   let k = k % n; //incase k is greater then n
+
+//   let part1 = arr.slice(-k);
+//   console.log("part1", part1);
+
+//   let part2 = arr.slice(0, n - k);
+//   console.log("n-k",n - k)
+//   console.log("part2.", part2);
+
+//   let rotateByK = part1.concat(part2);
+
+//   return rotateByK;
+// };
+
+// console.log(rotateBy(arr, k));
+
+// 3️⃣ Find the frequency of each element in an array
+// Example:
+// Input: [1, 2, 2, 3, 1, 4]
+// Output: {1: 2, 2: 2, 3: 1, 4: 1}
+
+// let arr = [1, 2, 2, 3, 1, 4];
+
+// let frequency = {};
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (frequency[arr[i]]) {  // check array element is present in frequency
+//     frequency[arr[i]]++;   //  increment its count
+//   } else {
+//     frequency[arr[i]] = 1;   // else intitiale to 1
+//   }
+// }
+
+// console.log("frquency..",frequency)
+
+// 4️⃣ Find the missing number in a given range
+// Example:
+// Input: [1, 2, 4, 5]
+// Expected: 3 is missing
+
+// let arr = [1, 2, 4, 5];
+
+// let n = arr.length + 1;
+// let expectedSum = (n * (n + 1)) / 2;
+
+// console.log("ExpectedSum ", expectedSum);
+
+// const actualSum = arr.reduce((acc, value) => acc + value, 0);
+
+// console.log("actualSum ", actualSum);
+
+// let missingNumber = expectedSum - actualSum
+
+// console.log("missing Number",missingNumber)
+
+
+// 5. Find the multiple missing number in a given range
+// Example:
+// Input: [1, 2, 4, 6]
+
+let arr = [1, 2, 4, 6,10];
+
+let min = Math.min(...arr);
+let max = Math.max(...arr);
+
+let set = new Set(arr);
+console.log("set", set);
+let missingNumber = [];
+for (let i = min; i <= max; i++) {
+  if (!set.has(i)) missingNumber.push(i);
+}
+console.log("missing number..", missingNumber);
