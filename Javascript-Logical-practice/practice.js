@@ -330,6 +330,7 @@ Example:
 Input: [1, 2, 3] and [2, 3, 4]
 Output: [2, 3]
 
+
 6️⃣ Find the union of two arrays (no duplicates)
 Example:
 Input: [1, 2, 3] and [3, 4, 5]
@@ -423,20 +424,104 @@ Output: [[1, 2], [3, 4], [5, 6]]
 
 // console.log("missing Number",missingNumber)
 
-
 // 5. Find the multiple missing number in a given range
 // Example:
 // Input: [1, 2, 4, 6]
 
-let arr = [1, 2, 4, 6,10];
+// let arr = [1, 2, 4, 6,10];
 
-let min = Math.min(...arr);
-let max = Math.max(...arr);
+// let min = Math.min(...arr);
+// let max = Math.max(...arr);
 
-let set = new Set(arr);
-console.log("set", set);
-let missingNumber = [];
-for (let i = min; i <= max; i++) {
-  if (!set.has(i)) missingNumber.push(i);
-}
-console.log("missing number..", missingNumber);
+// let set = new Set(arr);
+// console.log("set", set);
+// let missingNumber = [];
+// for (let i = min; i <= max; i++) {
+//   if (!set.has(i)) missingNumber.push(i);
+// }
+// console.log("missing number..", missingNumber);
+
+// 5️⃣ Find the intersection of two arrays
+// Example:
+// Input: [1, 2, 3] and [2, 3, 4]
+// Output: [2, 3]
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [2, 3, 4];
+
+// const intersection = arr1.filter((value) => arr2.includes(value));
+
+// console.log("intersection", intersection);
+
+// 6️⃣ Find the union of two arrays (no duplicates)
+// Example:
+// Input: [1, 2, 3] and [3, 4, 5]
+// Output: [1, 2, 3, 4, 5]
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [3, 4, 5];
+
+// let union = [];
+
+// for (let i = 0; i < arr1.length; i++) {
+//   if (!union.includes(arr1[i])) {
+//     union.push(arr1[i]);
+//   }
+// }
+
+// for (let i = 0; i < arr2.length; i++) {
+//   if (!union.includes(arr2[i])) {
+//     union.push(arr2[i]);
+//   }
+// }
+
+// console.log("Uninon..", union);
+
+// solution No 2
+
+// const union = [...new Set([...arr1, ...arr2])];
+// console.log("union..", union);
+
+// 7️⃣ Group elements by type (number, string, etc.)
+// Example:
+// Input: [1, "a", true, 2, "b", false]
+// Output: {number: [1, 2], string: ["a", "b"], boolean: [true, false]}
+
+// let input = [1, "a", true, 2, "b", false];
+
+// let grouped = {};
+
+// for (let i = 0; i < input.length; i++) {
+//   let type = typeof input[i];
+
+//   if (!grouped[type]) {
+//     grouped[type] = [];
+//   }
+
+//   grouped[type].push(input[i]);
+// }
+
+// console.log("grouped..", grouped);
+
+// 9️⃣ Remove falsy values from array
+// Falsy values: false, 0, '', null, undefined, NaN
+// Input: [0, "hello", false, 42, "", null]
+// Output: ["hello", 42]
+
+let arr = [0, "hello", false, 42, "", null];
+
+// let result = [];
+// for (let i = 0; i < arr.length; i++) {
+//   console.log("value", arr[i]);
+//   if (arr[i]) {
+//     result.push(arr[i]);
+//   }
+// }
+
+// solution no 2
+
+let truthyvalue = arr.filter(Boolean);
+
+console.log("truthyvalue", truthyvalue);
+
+// console.log("result",result)
