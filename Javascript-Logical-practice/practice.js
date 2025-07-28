@@ -508,7 +508,7 @@ Output: [[1, 2], [3, 4], [5, 6]]
 // Input: [0, "hello", false, 42, "", null]
 // Output: ["hello", 42]
 
-let arr = [0, "hello", false, 42, "", null];
+// let arr = [0, "hello", false, 42, "", null];
 
 // let result = [];
 // for (let i = 0; i < arr.length; i++) {
@@ -520,8 +520,23 @@ let arr = [0, "hello", false, 42, "", null];
 
 // solution no 2
 
-let truthyvalue = arr.filter(Boolean);
+// let truthyvalue = arr.filter(Boolean);
 
-console.log("truthyvalue", truthyvalue);
+// console.log("truthyvalue", truthyvalue);
 
 // console.log("result",result)
+
+// Reverse a string
+
+let name = "Deependra";
+
+let reverse = "";
+
+const reverseString = (str) => {
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i];
+  }
+  return reverse;
+};
+
+console.log(reverseString(name));
