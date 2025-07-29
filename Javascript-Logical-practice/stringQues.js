@@ -120,11 +120,51 @@ Input: "Mr John Smith" → Output: "Mr%20John%20Smith"
 //   console.log("str1", string1);
 //   console.log("str2", string2);
 //   return string1 === string2;
+
 // };
 
 // console.log(checkAnagram(str1, str2));
 
-
-// ✅ Capitalize the first letter of each word
+// 5 Capitalize the first letter of each word
 // Input: "hello world" → Output: "Hello World"
 
+// let str = "hello world";
+
+// const capitalizedwords = (str) => {
+//   let word = str.split(" ");
+
+//   let capitalized = [];
+
+//   for (let i = 0; i < word.length; i++) {
+//     let words = word[i];
+//     if (words.length > 0) {
+//       let capital = words[0].toUpperCase() + words.slice(1);
+//       capitalized.push(capital);
+//     } else {
+//       capitalized.push("");
+//     }
+//   }
+
+//   return capitalized.join(" ");
+// };
+
+// console.log(capitalizedwords("hello world"));
+
+// 🔤 Intermediate String Questions
+// ✅ Find the first non-repeating character
+// Input: "aabbcde" → Output: "c"
+
+let str = "aabbdced";
+
+const findfirstNonRepeating = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    if (str.indexOf(char) === str.lastIndexOf(char)) {
+      return char;
+    }
+  }
+  return null;
+};
+
+console.log(findfirstNonRepeating(str));
