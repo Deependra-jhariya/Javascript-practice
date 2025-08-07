@@ -154,17 +154,32 @@ Input: "Mr John Smith" → Output: "Mr%20John%20Smith"
 // ✅ Find the first non-repeating character
 // Input: "aabbcde" → Output: "c"
 
-let str = "aabbdced";
+// let str = "aabbdced";
 
-const findfirstNonRepeating = (str) => {
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
+// const findfirstNonRepeating = (str) => {
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
 
-    if (str.indexOf(char) === str.lastIndexOf(char)) {
-      return char;
-    }
-  }
-  return null;
-};
+//     if (str.indexOf(char) === str.lastIndexOf(char)) {
+//       return char;
+//     }
+//   }
+//   return null;
+// };
 
-console.log(findfirstNonRepeating(str));
+// console.log(findfirstNonRepeating(str));
+
+// 2. Check if string rotation is valid
+// "waterbottle" and "erbottlewat" → Output: true
+
+// let s1 = "waterbottle";
+// let s2 = "erbottlewat";
+
+// const isRotation = (s1, s2) => {
+//   if (s1.length !== s2.length || s1.length === 0) {
+//     return false;
+//   }
+//   return (s1 + s1).includes(s2);
+// };
+
+// console.log(isRotation(s1, s2));

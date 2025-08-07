@@ -12,11 +12,28 @@ for (let i = 13; i <= 13; i++) {
 //     console.log("JAY MAHADEV")
 // }
 
-
 // let i = 1;
 
 // while (i <= 10) {
 //   console.log(i++);
 // }
+
+// 1. Remove duplicate elements from an array
+
+// Example: [1, 2, 2, 3, 4, 4, 5] => [1, 2, 3, 4, 5]
+
+let arr = [1, 2, 2, 3, 4, 4, 5];
+
+let uniqueArray = []
+
+for(let i =0 ; i<arr.length; i++){
+
+  if(!uniqueArray.includes(arr[i])){
+    uniqueArray.push(arr[i])
+  }
+
+}
+
+console.log("uniqueArray",uniqueArray)
 
 
