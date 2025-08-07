@@ -13,7 +13,6 @@
 
 // const myfunction = (name) => {
 
-
 //   function displayName() {
 //     console.log(name);
 //   }
@@ -31,3 +30,21 @@
 
 // mydisplay();
 // myshowNAme();
+
+// callback and HOF
+
+const add = (a, b, cb) => {
+  let result = a + b;
+  cb(result);
+
+  function myresult() {
+    console.log("myResult", result);
+  }
+  return myresult;
+};
+
+function sum(result) {
+  console.log(result);
+}
+let myadd = add(2, 2, sum);
+myadd();
